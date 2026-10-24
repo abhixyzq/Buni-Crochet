@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fdf7ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary-container": "#645a7d", "surface": "#fdf7ff", "on-primary-fixed": "#22005d", "outline-variant": "#cbc4d2", "on-tertiary-fixed": "#241a00", "inverse-surface": "#322f35", "primary": "#4f378a", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#4f378a", "tertiary-fixed": "#ffdf93", "primary-fixed-dim": "#cfbcff", "on-secondary-fixed": "#1f1635", "surface-container-lowest": "#ffffff", "background": "#fdf7ff", "on-primary": "#ffffff", "surface-container-highest": "#e6e0e9", "error": "#ba1a1a", "error-container": "#ffdad6", "surface-dim": "#ded8e0", "tertiary": "#765b00", "on-surface": "#1d1b20", "surface-tint": "#6750a4", "on-error-container": "#93000a", "surface-variant": "#e6e0e9", "surface-container-high": "#ece6ee", "on-error": "#ffffff", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#e7c365", "on-secondary-fixed-variant": "#4b4263", "on-tertiary-fixed-variant": "#594400", "secondary-fixed-dim": "#cdc0e9", "on-surface-variant": "#494551", "surface-container": "#f2ecf4", "tertiary-container": "#c9a74d", "primary-fixed": "#e9ddff", "secondary-fixed": "#e9ddff", "secondary-container": "#e1d4fd", "inverse-primary": "#cfbcff", "outline": "#7a7582", "secondary": "#63597c", "surface-container-low": "#f8f2fa", "on-tertiary-container": "#503d00", "on-background": "#1d1b20", "inverse-on-surface": "#f5eff7", "surface-bright": "#fdf7ff", "on-primary-container": "#e0d2ff", "primary-container": "#6750a4" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, fontFamily: { "headline": ["Public Sans"], "display": ["Public Sans"], "body": ["Public Sans"], "label": ["Public Sans"] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="bg-tertiary-container text-on-tertiary-container py-1.5 px-3 text-center text-[11px] font-label font-medium tracking-wide flex items-center justify-center gap-1.5 overflow-hidden"><span class="material-symbols-outlined text-[14px]">local_shipping</span><span class="truncate">Free shipping on orders above ₹999 • Handmade with love in India</span></div><div class="h-14 px-4 flex items-center justify-between"><div class="flex items-center gap-2"><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-full active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-2xl">menu</span></button><img alt="Buni Crochet Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UYyGvLJuCydA0P0ozZlO7wiq5i2p1pO7lBqOqqkP6zTVDRiJrpy8E3KXFMvjEvvWulaQ6pWQxypCBlc7NxTklF9kvpoN-yc1S-an91lrWSEA5JaNL36-yKyOGKjaLCFT0iEO7_wehc3rAqDLqzyPIpLhNc0SZzl9-mw6yTYSXi3mJMlAsZjmqQdCJyM6j5lykg91qSRu52iGTw5D48bIOfkAthQ63USwlrb72OsVBpviSmlaxwuIcS"/><span class="text-xs font-label uppercase tracking-widest text-on-surface-variant hidden xs:inline-block pl-1">Explore Catalog</span></div><div class="flex items-center gap-1"><button aria-label="Search" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-full active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-xl">search</span></button><button aria-label="Wishlist" class="w-11 h-11 flex items-center justify-center text-on-surface rounded-full active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-xl">favorite</span></button><button aria-label="Cart" class="w-11 h-11 flex items-center justify-center text-on-surface relative rounded-full active:bg-surface-container transition-colors"><span class="material-symbols-outlined text-xl">shopping_bag</span><span class="absolute top-2 right-2 min-w-[16px] h-4 bg-primary text-on-primary text-[10px] font-bold rounded-full flex items-center justify-center px-1">2</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover ml-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsfR7bXDovwd1pFBEYVBUmrWLHnjA-250TADQxeNlNZ4VuGZj5BSS20CNJrcpLRCidWd1PsfPmZuPbHUqf_kUE2llrqfzF2eXtdlH5ErWiiuE-xRNh8vUaOzTB5t6oiFdIPVZp4uaQ6nbH14t4_J2umcIoBx7Yb7s8xOs2-yVhCvrAe7lCNjZW9eYff9gs1NZqASu7qIivSKlp5SenxVGilNb_nm262SWFme7s8wACf6SZ9BlqJuA"/></div></div></header><main class="flex-1 flex flex-col relative w-full pt-[82px] pb-24 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- 1. Editorial Hero Section -->
+<section class="relative px-4 pt-4 pb-8 flex flex-col gap-5">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-sm bg-surface-container-low min-h-[460px] flex flex-col justify-end p-5">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Editorial lifestyle photography of luxury artisanal crochet floral bouquet with daisies, tulips and delicate eucalyptus leaves in warm sunlight, soft linen backdrop, aesthetic terracotta and cream tones, slow living handmade craft aesthetic" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDm84cDxUPBRb5q_QphiQFgZ6Oi3SzYgTT4Ojji3D6Ssbwb16SWiHq-kLKjji-QoEHlNO-6hid8bhJgVo1-VOk4c0C_GXSz4dHzaEhbOuwNby3PN-O46RudspxbRL6r0AI4Go1PVc2AZe5H-_3v8NMClxVXR1HcOjUOZCnIyCHv60FqsQRz2us2urf4EWXO2QbGP0l1PknZiQ6uYUUnwb7xOSvAUidJojYEmrLRBYA5vlzAF3ijrs')">
+</div>
+<!-- Soft Gradient Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-transparent"></div>
+<!-- Hero Content -->
+<div class="relative z-10 flex flex-col gap-3">
+<div class="inline-flex items-center gap-1.5 self-start px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="text-[10px] font-label font-semibold tracking-widest uppercase text-tertiary">Artisanal Crochet • India</span>
+</div>
+<h1 class="text-3xl font-headline font-bold text-on-surface tracking-tight leading-tight">
+          Made by hand.<br/>
+<span class="text-primary italic font-serif font-normal">Made to keep.</span>
+</h1>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed max-w-[280px]">
+          Thoughtfully crafted crochet pieces for heartfelt gifting, everyday moments and little lasting joys.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-2.5 pt-2">
+<button class="w-full py-3 px-4 rounded-xl bg-primary text-on-primary text-xs font-label font-semibold tracking-wide shadow-md active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+<span>Shop Collection</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-lowest text-primary text-xs font-label font-semibold tracking-wide shadow-sm active:bg-surface-container transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+<span>Create Custom Gift</span>
+</button>
+</div>
+<!-- Micro Tag -->
+<div class="flex items-center justify-between pt-1 text-[11px] text-on-surface-variant font-label">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-primary">eco</span>
+            100% combed cotton yarn
+          </span>
+<span class="flex items-center gap-0.5 opacity-70">
+            Scroll to explore
+            <span class="material-symbols-outlined text-[13px] animate-bounce">expand_more</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Shop by Mood / Occasion -->
+<section class="px-4 py-6 flex flex-col gap-4">
+<div class="flex items-baseline justify-between">
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Curated Moments</p>
+<h2 class="text-xl font-headline font-bold text-on-surface">Find something worth keeping.</h2>
+</div>
+<span class="text-[11px] font-label text-primary font-medium">4 Moods</span>
+</div>
+<!-- Category Grid -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Card 1 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col active:scale-[0.99] transition-transform">
+<div class="h-32 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Delicate handmade crochet bouquet wrapped in brown kraft paper with natural twine bow, aesthetic pastel flowers for anniversary or birthday gift, warm sunlit studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATzPmjRAn_1fKuwt0_Lgfnu_Ltys9ezvC50O1Gfrk7xB4DOHSbxFZ1_fLdWYD7uN89uvDow1cTQh8rUmKTIhwsk8eNpCatgu9yNHCWrIq7JKxns50WqQA0P8lAl49VIB2jRnZ88zRDk8Ds-AG_V4FECF2OHEBx_CfRDa2Z2jxkdIlbhh4KwRzodsElPlm2j3xnasmspishJt4qS8xnM9qt_IDNS1b7dV0Z4S0w8-euNjuZiM4Krok"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-[9px] font-label font-bold tracking-wider uppercase text-on-surface">Loved</span>
+</div>
+<div class="p-2.5 flex flex-col">
+<h3 class="text-xs font-headline font-bold text-on-surface">For Someone Special</h3>
+<p class="text-[10px] text-on-surface-variant truncate">Birthday • Anniversary • Love</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col active:scale-[0.99] transition-transform">
+<div class="h-32 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Single handcrafted crochet tulip flower and whimsical cherry keychains sitting on warm ceramic tray, natural organic textures and cheerful pastel colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVtqCEEjTSeVZKo92xDPzcHrUQobMTN1-7YvmmdJ30fvYhPD531QcVJs0vqAs85crym2F3domeJ2KXve3e3L6QCFc6LnQYAmsKCFvucW5f7FBbeU4NfQtM4F3Nu9CZwKcUpNH1BLzc5T1SzFIHphCNPZBpMBIrB_Mtv3uKoWMfwnQzJ4o_mYZzH5XGt-_c5RTRdZpHB1JTxKyrQ1iCibyc-6nLdCweCLsVowpAmPwVQ0vOSJ2ubAE"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-[9px] font-label font-bold tracking-wider uppercase text-on-surface">Little Gestures</span>
+</div>
+<div class="p-2.5 flex flex-col">
+<h3 class="text-xs font-headline font-bold text-on-surface">Just Because</h3>
+<p class="text-[10px] text-on-surface-variant truncate">Flowers • Charms • Trinkets</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col active:scale-[0.99] transition-transform">
+<div class="h-32 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Handmade miniature crochet amigurumi bunny toy and tiny plush bear sitting in woven basket, soft gentle nursery decor aesthetic, warm neutral light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQq79Y6gFxABB5LaKqIThM86BqNPNEA-dqas9SyE-ePBeDaOAE-kx5hhbgSQRkf4F7CGSqsr0MkL7ah3sxA2dPKkzIrRfC-pb3VQ-c9AaeJfTQtmh_vxgNfeDCvooi7IFdqe4d5HZvxzxb00h1FyU2RHCn0vfZcU97gDWT_6ElhmFa5x3AP0b2zNEcVkqMKuTPTqR_iaJVyRE3lYmbqLmTawzvhVQc1o0UrncyiLD3FTFd-1U74qc"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-[9px] font-label font-bold tracking-wider uppercase text-on-surface">Cute</span>
+</div>
+<div class="p-2.5 flex flex-col">
+<h3 class="text-xs font-headline font-bold text-on-surface">Little Joys</h3>
+<p class="text-[10px] text-on-surface-variant truncate">Amigurumi • Collectibles</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col active:scale-[0.99] transition-transform">
+<div class="h-32 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Artisanal woven crochet granny square shoulder tote bag resting on warm linen chair beside ceramic coffee cup, slow lifestyle aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARJ6yd56uYIKI3xmX03tnxU2_uc9h6Oi5nHVu0tArR49sGytxkcdnlmXI_slRODmOHYair2iSb6nWMWc0Vg9g0AYQzmQjKXvxY4h8ZEfJyDLHLUjawAhR2tfGfnXe2Pc5kZg6E1XEdHuGno8c5TlMuFP8Ah4dEXknqh4K0LEyIhcF-jZxNbF4astMCBsL1EVTgpBPQtJ2ZrdVeeeyopi54ZwMrlRACDnpoL1iqGwFLPbfRVLm1ZhE"/>
+<span class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-[9px] font-label font-bold tracking-wider uppercase text-on-surface">Daily Use</span>
+</div>
+<div class="p-2.5 flex flex-col">
+<h3 class="text-xs font-headline font-bold text-on-surface">Everyday</h3>
+<p class="text-[10px] text-on-surface-variant truncate">Bags • Pouches • Home</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Most Loved (Best Sellers) -->
+<section class="px-4 py-6 flex flex-col gap-4 bg-surface-container-low/50">
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-xl font-headline font-bold text-on-surface">Most Loved</h2>
+<p class="text-xs font-body text-on-surface-variant">Handmade favorites our customers keep coming back for.</p>
+</div>
+<a class="text-xs font-label font-semibold text-primary flex items-center gap-0.5 hover:underline whitespace-nowrap" href="#">
+        View all
+        <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Product 2-Column Grid -->
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Handcrafted crochet daisy bouquet with delicate textured cream petals and mustard yellow center, wrapped in luxury paper with satin ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDM25d6iYj7MoJm2CK9dIIDNrMjnoIsauWdE9oKzC5qnl82KqLwZQu6r-bHkWosT7p7jJwZnGhLeyiNkgobTds1BwswFPy0mUxIMp6gksoTOgUhK513d75UqCgYYD_s5O1WB4_AQ-ktcE4X9-N5Cex8hXh77Tk0BwH0GOLLBTwJ3_Wo7ARSIbbHEMfSusPm4eVJoDRXZX9IrYBXKNsQsVb2cL1cnZAujugMu-UXCWz0D5SMfiam_sg"/>
+<span class="absolute top-2 left-2 px-1.5 py-0.5 rounded bg-tertiary-container text-on-tertiary-container font-label text-[9px] font-bold uppercase">Bestseller</span>
+<button class="w-7 h-7 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface absolute top-2 right-2 flex items-center justify-center active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="pt-2.5 flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[11px] text-tertiary font-label font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-on-surface-variant text-[10px]">(124)</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface truncate">Crochet Daisy Bouquet</h3>
+<p class="text-[10px] text-on-surface-variant">Pure combed cotton yarn</p>
+<div class="flex items-center justify-between pt-1 mt-auto">
+<span class="text-xs font-headline font-bold text-on-surface">₹899</span>
+<button class="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-container text-[11px] font-label font-semibold active:scale-95 transition-transform flex items-center gap-0.5">
+<span>Add</span>
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Single pastel pink mini crochet tulip flower with sage green stem and leaf in minimalist handmade ceramic vase, warm ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2i2kyOuSR8HPzggMhhPPF6wwOo_zdldJRY4ANpRvOJJFEp6qmvivfpxfgOJevllKinRPBiSdZYIIMFS6n4SdpQZ8IIhgsXZGS6wBsWjda5bY63H3apFnQYdf3n6IhJ1d0BvKk2Zs3HrTuWTXyYrYdGXg50Gd1-ZhTTRFdN9KYd2TSocPxu5DkEAIijHhvMQEQjd9C2mG3c99OoWgP3XVdHC1KcNmXxcenoIvBEB3GLUuM8P8ATKE"/>
+<button class="w-7 h-7 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface absolute top-2 right-2 flex items-center justify-center active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="pt-2.5 flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[11px] text-tertiary font-label font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+<span class="text-on-surface-variant text-[10px]">(89)</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface truncate">Mini Crochet Tulip</h3>
+<p class="text-[10px] text-on-surface-variant">Includes stem stand</p>
+<div class="flex items-center justify-between pt-1 mt-auto">
+<span class="text-xs font-headline font-bold text-on-surface">₹399</span>
+<button class="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-container text-[11px] font-label font-semibold active:scale-95 transition-transform flex items-center gap-0.5">
+<span>Add</span>
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Puffy 3D crochet heart charm keychain in terracotta red with brass ring attached to canvas bag, artisan hand stitched details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrH6hwFNIGdkerWbBUOrgfMgp8CeaN7cPOruxej5wtaev4M4E3x1Il8uIrX64JKcleB-Y3LpP9IggHUeLXR9OS6Ms1yi8yGP9d7tJ7pXijjJIl3oEfpdnhf56Iv9_hN3BlkR4y1L0_SEsifqakV0UHgZi8gJCejyVZGiq7nni-oyiysFIjIvRcs-VMvF5A46KvTkSnQbpEnz4MeFtccGceFMvpO70hWr2iRPHJOCnX_F9cHl78zFw"/>
+<button class="w-7 h-7 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface absolute top-2 right-2 flex items-center justify-center active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="pt-2.5 flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[11px] text-tertiary font-label font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+<span class="text-on-surface-variant text-[10px]">(64)</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface truncate">Crochet Heart Charm</h3>
+<p class="text-[10px] text-on-surface-variant">Solid brass hardware</p>
+<div class="flex items-center justify-between pt-1 mt-auto">
+<span class="text-xs font-headline font-bold text-on-surface">₹249</span>
+<button class="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-container text-[11px] font-label font-semibold active:scale-95 transition-transform flex items-center gap-0.5">
+<span>Add</span>
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-2.5 shadow-sm flex flex-col justify-between relative group">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Neutral beige and sage green crochet shoulder tote bag with woven handles hanging against sunny minimalist textured wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO96MA1ZIniImh2W97iKh_ISKUWvXidyIPgMP7XTO4uSgZ-9U0JncUVl7W6uWjMOHz8hWZ6Iq0q0q5gqeSn9jZfcBDntaEyY_vUEAa4iPAT3GCAjiDN20NAIvSpaQrsb_uWHEoUYmGWoP-9DJy_dUkx6FHjdaDK7JVXX19D4TB8yyt7MnHrksPkgDh1arLYReZojZgNypJZqRKAdIfeEsmUWWLtLlXnyrEiz426lsvlFIYK_KVtvE"/>
+<button class="w-7 h-7 rounded-full bg-surface/80 backdrop-blur-sm text-on-surface absolute top-2 right-2 flex items-center justify-center active:scale-90 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</button>
+</div>
+<div class="pt-2.5 flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[11px] text-tertiary font-label font-medium">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-on-surface-variant text-[10px]">(42)</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface truncate">Everyday Crochet Tote</h3>
+<p class="text-[10px] text-on-surface-variant">Double-ply sturdy yarn</p>
+<div class="flex items-center justify-between pt-1 mt-auto">
+<span class="text-xs font-headline font-bold text-on-surface">₹1,299</span>
+<button class="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-container text-[11px] font-label font-semibold active:scale-95 transition-transform flex items-center gap-0.5">
+<span>Add</span>
+<span class="material-symbols-outlined text-[14px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Personalized Gifting Section (Interactive Configurator Preview) -->
+<section class="px-4 py-8 flex flex-col gap-4">
+<div class="rounded-2xl bg-secondary-container/40 p-5 shadow-sm flex flex-col gap-4 relative overflow-hidden">
+<!-- Ambient decorative thread arc -->
+<svg class="absolute -right-8 -top-8 w-36 h-36 text-primary/10 pointer-events-none" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="40" stroke-dasharray="4 4"></circle>
+</svg>
+<div class="flex flex-col gap-1 z-10">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Custom Studio</span>
+<h2 class="text-2xl font-headline font-bold text-on-surface">Made just for you.</h2>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+          Choose the colors, custom details and handwritten touches that make your gift truly one of a kind.
+        </p>
+</div>
+<!-- Configurator Card -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm flex flex-col gap-3.5 z-10">
+<!-- Live Preview Image -->
+<div class="relative h-44 rounded-lg overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover transition-all duration-300" data-alt="Artisanal gift box unboxing with handmade crochet roses, personalized calligraphed card, dried flower sprig and cotton ribbon, luxury warm packaging photography" id="gift-preview-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTJHs_buh9J7PismF3ihvnPl73lb9gTYzz5FzLBT8HfXtVFPILEG08MFVTFixy0o8dBriCNntrtvKo_o7ayeUUcrZ0qdLYIlcfBcT31OM1n9pObu4lIJ8JL5xOCaVJepKcadBEHJtpygN9R_O00Ap4Gjw8xN9_DK6YIgwmoGc5F6lOL0YGgyFXT0EkvgIanYvuFjHprDxDXapcm0LFpzSfoCcefbBPLlUhsJVW5iNaz2kIiokAri4"/>
+<div class="absolute bottom-2 left-2 right-2 bg-surface/90 backdrop-blur-md px-2.5 py-1.5 rounded-lg flex items-center justify-between text-[11px]">
+<span class="font-medium text-on-surface">Selected: <strong class="text-primary" id="selected-shade">Terracotta Blend</strong></span>
+<span class="text-tertiary font-bold">₹1,199</span>
+</div>
+</div>
+<!-- Color Swatch Selector -->
+<div class="flex flex-col gap-1.5">
+<span class="text-[11px] font-label font-semibold text-on-surface-variant">Step 1: Pick Palette</span>
+<div class="flex items-center gap-2.5" id="color-swatches">
+<button class="color-swatch-btn w-7 h-7 rounded-full bg-[#C46D5E] shadow-sm flex items-center justify-center scale-110 shadow-outline" data-color="Terracotta Blend">
+<span class="material-symbols-outlined text-[14px] text-white">check</span>
+</button>
+<button class="color-swatch-btn w-7 h-7 rounded-full bg-[#8A9A86] shadow-sm flex items-center justify-center" data-color="Sage Forest">
+<span class="material-symbols-outlined text-[14px] text-white opacity-0">check</span>
+</button>
+<button class="color-swatch-btn w-7 h-7 rounded-full bg-[#EAD89C] shadow-sm flex items-center justify-center" data-color="Buttercream Dream">
+<span class="material-symbols-outlined text-[14px] text-surface opacity-0">check</span>
+</button>
+<button class="color-swatch-btn w-7 h-7 rounded-full bg-[#D4A5A5] shadow-sm flex items-center justify-center" data-color="Dusty Rose">
+<span class="material-symbols-outlined text-[14px] text-white opacity-0">check</span>
+</button>
+</div>
+</div>
+<!-- Step Pill Indicators -->
+<div class="grid grid-cols-3 gap-1.5 pt-1 text-center font-label text-[10px]">
+<div class="py-1.5 px-1 rounded bg-surface-container font-semibold text-primary">1. Colors</div>
+<div class="py-1.5 px-1 rounded bg-surface-container-low text-on-surface-variant">2. Note</div>
+<div class="py-1.5 px-1 rounded bg-surface-container-low text-on-surface-variant">3. Wrap</div>
+</div>
+<!-- Action -->
+<button class="w-full py-3 rounded-lg bg-primary text-on-primary text-xs font-label font-bold tracking-wide shadow-md active:scale-[0.98] transition-transform flex items-center justify-center gap-2">
+<span>Create Your Custom Gift</span>
+<span class="material-symbols-outlined text-[15px]">brush</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 5. Product Collections (Editorial Bento Layout) -->
+<section class="px-4 py-6 flex flex-col gap-4">
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Discover By Category</p>
+<h2 class="text-xl font-headline font-bold text-on-surface">The Handcrafted Range</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Big Feature Card -->
+<div class="relative h-56 rounded-2xl overflow-hidden shadow-sm flex flex-col justify-end p-4">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Vibrant hand-crocheted everlasting flowers in tall textured vase, sun drenched studio room with warm natural aesthetic shadows" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrW1bKsX2KWxC9wDXJnNuzABUMUFU-HCWXfgGcu_a-ZisE4KSBEY8BSK4PrPwAHYoQLeSv11GlimYbogZgM7xKYv_qUQWrcAFb4yvyuOPrlR20LA2CpsVA_dsH-nqwwqdVE22kP0t3w9JqCXK4c9eYg03rS1C2ciR1nGJw_FBSYfDdx7taAzyayr86JFNaELVRg73oqbaZyNyvgj1Mdgu9xAxoJF3a7Cvj6s0Mop73DEol_CxWYKw')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+<div class="relative z-10 flex items-end justify-between">
+<div>
+<span class="text-[10px] font-label uppercase tracking-wider text-primary font-bold">Forever Blooms</span>
+<h3 class="text-lg font-headline font-bold text-on-surface">Crochet Flower Bouquets</h3>
+<p class="text-xs text-on-surface-variant">They never wilt. Made with love.</p>
+</div>
+<span class="w-8 h-8 rounded-full bg-surface-container-lowest text-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</span>
+</div>
+</div>
+<!-- Split Duo -->
+<div class="grid grid-cols-2 gap-3">
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm flex flex-col justify-end p-3">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Collection of cute amigurumi stuffed crochet animal keepsakes on wooden shelf, pastel soft yarns" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbF55AZAFPSR1KFHDKPpI4sYaAogJphOpA89ElPevSWATdn9A2PUlDCEy2yXZnu4ZrCoM6itf5AEGbega8CZcZ4HfvsGPhn1_h8MSgGg4FHbXlX4n4T6u-7lIbNhmS9CI-eEZ3k5CxdwSNlWYogxMw9DHO9s5NrPd2Wk29KkOat7D9pJQUErt63cS6hpr5qrEbncgTIqiP5UVOPOoFCD_AQ1wSuc7ehyBQkkF0fW9zUh-36k5F39o')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="text-xs font-headline font-bold text-on-surface">Amigurumi Friends</h3>
+<p class="text-[10px] text-on-surface-variant">Cute Keepsakes</p>
+</div>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden shadow-sm flex flex-col justify-end p-3">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Intricately crocheted coaster sets and mug cozies on wooden coffee table with tea cup and handmade candle" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxf8_LQszjQn6Nj6FP9mPADbEK6dEAGxCxOdOlwqNU6ghaLSacityaVhT5M4ebq-5LPx98IoUiXwLTV9FoxBTKqqol1AystN7iFEuSgn95-AzXWHIi5_aXnJLA2_9VIPoV3MYnRVVg8qnM85vr4Aky4PFscaoqIxBFi2U-AOq5EBXQPHNigJtyT5oGhD-4Isw9nTdQxwOtevjkhylR9j9NT_mz-_C7NHYuPwGmfDafavzEVCZ9_cI')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="text-xs font-headline font-bold text-on-surface">Home &amp; Table</h3>
+<p class="text-[10px] text-on-surface-variant">Cozy Accents</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Why Handmade -->
+<section class="px-4 py-8 flex flex-col gap-4 bg-surface-container-low/60">
+<div class="text-center flex flex-col items-center gap-1">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">The Buni Philosophy</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">Small stitches. Big meaning.</h2>
+<p class="text-xs font-body text-on-surface-variant max-w-xs">Honoring patience and artisanal craft over fast factory production.</p>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">pan_tool</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface">100% Handcrafted</h3>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Every loop, knot, and seam is carefully crocheted with artisan hands.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface">Wonderfully Unique</h3>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Subtle organic variations ensure no two pieces are ever identical.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">featured_seasonal_and_gifts</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface">Gift Ready</h3>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Arrives packaged in luxury boxes with ribbons and personalized wax seals.</p>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex flex-col gap-2">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">loyalty</span>
+</div>
+<h3 class="text-xs font-headline font-bold text-on-surface">Made in India</h3>
+<p class="text-[11px] text-on-surface-variant leading-relaxed">Supporting local women crafters and traditional textile preservation.</p>
+</div>
+</div>
+</section>
+<!-- 7. Brand Story (Cinematic Editorial) -->
+<section class="px-4 py-8 flex flex-col gap-4">
+<div class="rounded-2xl overflow-hidden bg-surface-container-lowest shadow-sm flex flex-col">
+<div class="h-52 w-full relative">
+<img class="w-full h-full object-cover" data-alt="Close up aesthetic shot of artisan female hands holding wooden ergonomic crochet hook weaving warm soft terracotta organic cotton yarn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2htcbZLyZLSv-VWsuGoALpvXU8EBta3bqscilfTpnBgno5-Cs30QQandfulM9hIU1yDjEjFCpGw9XmA270wq6r9tIrpFCgUH0yWj_PVtVZti8Bai_HXPZQLX0mDOEaWjziyMqE5nr_cW1shRQzPkuOyB3Kovp1CTiy1X7CnuRWBog1dyq0pzk6_MkxIatewNQd60cFPJiCbLSKCVZHbUe3shQOZzQUqzD9ZVMk3d7gN9L4Lvhsr0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+</div>
+<div class="p-5 flex flex-col gap-3 -mt-6 relative z-10">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Our Journey</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">Every stitch has a story.</h2>
+<p class="text-xs font-body text-on-surface-variant leading-relaxed">
+          Buni Crochet started with a simple belief — in a world dominated by mass production and fleeting plastic, handcrafted gifts carry lasting warmth. We weave patience, calm intention, and gentle textures into every treasure.
+        </p>
+<a class="inline-flex items-center gap-1.5 text-xs font-label font-bold text-primary hover:underline pt-1" href="#">
+<span>Read our full artisan story</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 8. Seen & Loved (Community Grid) -->
+<section class="px-4 py-6 flex flex-col gap-4">
+<div class="flex items-end justify-between">
+<div>
+<p class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">@bunicrochet</p>
+<h2 class="text-xl font-headline font-bold text-on-surface">Seen &amp; Loved</h2>
+<p class="text-xs text-on-surface-variant">Real moments from our warm community.</p>
+</div>
+<a class="px-2.5 py-1 rounded-full bg-surface-container text-[11px] font-label font-medium text-on-surface hover:bg-surface-container-high transition-colors" href="https://instagram.com" target="_blank">
+        Follow +
+      </a>
+</div>
+<!-- 6-tile aesthetic mosaic -->
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Customer smiling while holding customized crochet daisy bouquet in sunny living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1ACsdQUsXKmrxus5SKijQkY2uIxdTM0f2m2DyEjrGAIniRi1F5ufP5CJQ-cf9iPFSnr9P0NKWGaiR9FSQFEtLA0C7fcrBbBdEIeJDn9G1vr3GFIoegN13q2hXWWbMehIEz6LBPdYVbTOcjVh7wlxVkqsE3SHl0uCBgx0DXu4PM4X0BHrkogf7hBXb2TTBDovs_vN3T8oqpZ6U_vAoRu2ngBb40axOinWJuBK1Q5JIP4xaRbCY9bc"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Aesthetic unboxing of luxury crochet package with handwritten note and ribbon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7euTg1xAMger--gum4bYPQlDyFmMtEfex9cTVjbr0EGa6QqAWYMnQrqBxqwB83mnXgdOskAxCn8ITrtEEWE9xtWZ8rU2z2uS6zjZRy_nkfVloA_rNDu_Z-CJKrqrpmjlYvCiMK7izv5mdhLx5e5P4v0YpYad1gRYGZMcrA8h2X93J2qnZ6lGZB4aGvHoXhUk-bVR-mFhexTsSTtv__vT7Wh21wqIfDf0fmp2gtDJ1zRfSKWNARLI"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Crochet car hanging charm dangling from rear view mirror on golden hour drive" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5LuKQFRMV968fvssuZSxsAU5S6TpfICIdoVmUXVXNQCtW_93b13lBr5kl9_cDHK4UzyS31GLyPsROHiKa5HAklme9axhBBkFodSx0ee1bAGDvgHXTFVdG8lVVVNxHxcNTsoQHgomlpxDP9RqmjbcZgJ3Bwabrek0NJcYRD2LH64wr3jQvlEzEdE2Y8XMsWezHIdjPM6tEugWv0gQLtrp3KJ1o_VyK39DAU5nSr1ryZ5yLb1Fwh0A"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Cute crochet bear plushie sitting on wooden nursery nightstand beside warm lamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzXpDTO4KFoTpGlRC841d_k-EWIIre0UKDALf4z1ZZiSDSFgBzJODPZS_skmPpRZ2-taQQZJlgzBdMgYmXUpM5YHKPi76onGVZLDVz5uaoCLLKiyZptpyKXFmORjKx2nhYL0QIXzzSffbp4HPZ4eRzMH97FjqkKsZo65CDUW5spitxW1l3m65nJUCielSv530pfrGg__O5EAwYxdPzJKZgAHvPc4SIyC5M9llSBwv_CF0P_E0MiAg"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Person wearing oversized handmade crochet cardigan in soft sage and ivory colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZBOHKCh4UrT2LXhxGnA8HiAt9b2w9cHg9_nfGN3dadNjDJw0ZmbsHR5e94KUsVF5xrIV3coqysh2O8nBtghw17uapOqhBOTH2jUGCPtI1drKoz99J2B59oKh3tWTerPiOefcBjjJULZr-X5z3KoTq3mGlEKI2_oKRMZS_TuSW_cZu7I0d6_5Mpgj2fwJkL-Nle4-q4t1Vb_SHMXa86Fvm8OawKWsIpMO4bFkkLtnh35MpZOV4lGM"/>
+</div>
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Hand holding three mini crochet sunflower stems against clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWKESZ4mzVn5H-0Mulw3mStH-FfGvZHYsW3d_2j2CF2Htt0ygBfw5zHn554SYKXseEZNsa52If-64FUcq7z37XafN9zJI3gQrLWyannB09RHxw8iQQ6sQ98IAbNxEwzR965MyqssgFQFFZJbGkinYnW6kVG4rq_Y1p7bvtFW_e6YBtpYkCbc80T0d4HsnZqdo_qBhuPmZ3Z3X-cSyq_VPeiYfypECV-W-xu0uoIjCvHQbJhoZSvgo"/>
+</div>
+</div>
+</section>
+<!-- 9. Customer Reviews -->
+<section class="px-4 py-6 flex flex-col gap-4 bg-surface-container-low/40">
+<div class="text-center flex flex-col items-center">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold">Kind Words</span>
+<h2 class="text-xl font-headline font-bold text-on-surface">Loved by our customers</h2>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Review 1 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-primary font-label font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Buyer
+          </span>
+</div>
+<p class="text-xs font-body text-on-surface leading-relaxed">
+          “Ordered the Daisy Bouquet for my sister's graduation. The yarn quality is exquisite and the custom gift note was written so tenderly. She cried happy tears!”
+        </p>
+<div class="text-[11px] font-label font-bold text-on-surface-variant pt-1">
+          Ananya S. — <span class="font-normal text-on-surface-variant/70">Mumbai</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-4 rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex text-tertiary">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] text-primary font-label font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Verified Buyer
+          </span>
+</div>
+<p class="text-xs font-body text-on-surface leading-relaxed">
+          “The mini tulips are now on my work desk! Unlike fresh flowers, these brighten my morning every single day without drying up. Superb craftsmanship.”
+        </p>
+<div class="text-[11px] font-label font-bold text-on-surface-variant pt-1">
+          Priya M. — <span class="font-normal text-on-surface-variant/70">Bengaluru</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. Newsletter Section -->
+<section class="px-4 py-8 flex flex-col gap-3">
+<div class="bg-primary text-on-primary rounded-2xl p-5 shadow-md flex flex-col gap-3 relative overflow-hidden">
+<!-- Subtle organic ambient circle -->
+<div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-white/10 blur-xl pointer-events-none"></div>
+<div class="flex flex-col gap-1 z-10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-primary-container font-semibold">Join The Inner Circle</span>
+<h2 class="text-xl font-headline font-bold text-on-primary">A little handmade joy, in your inbox.</h2>
+<p class="text-xs font-body text-on-primary/80 leading-relaxed">
+          Get first access to limited drops, seasonal gift sets, and secret subscriber previews.
+        </p>
+</div>
+<form class="flex flex-col gap-2 z-10 pt-1" id="newsletter-form" onsubmit="event.preventDefault(); document.getElementById('nl-success').classList.remove('hidden');">
+<div class="flex gap-2">
+<input class="flex-1 px-3 py-2.5 rounded-lg bg-surface text-on-surface text-xs placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-tertiary shadow-sm" placeholder="Your email address" required="" type="email"/>
+<button class="px-4 py-2.5 rounded-lg bg-tertiary-container text-on-tertiary-container text-xs font-label font-bold shadow active:scale-95 transition-transform whitespace-nowrap" type="submit">
+            Subscribe
+          </button>
+</div>
+<p class="hidden text-[11px] text-tertiary-fixed font-medium mt-1" id="nl-success">✨ You are subscribed! Welcome to our craft family.</p>
+<span class="text-[10px] text-on-primary/60 font-label">No spam. Only beautiful handcrafted stories &amp; warmth.</span>
+</form>
+</div>
+</section>
+</div>
+<script>
+  // Simple interactive palette preview toggle for Section 4
+  document.querySelectorAll('.color-swatch-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.color-swatch-btn').forEach(b => {
+        b.classList.remove('scale-110');
+        const icon = b.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('opacity-0');
+      });
+      btn.classList.add('scale-110');
+      const icon = btn.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.remove('opacity-0');
+      
+      const shadeName = btn.getAttribute('data-color');
+      const targetText = document.getElementById('selected-shade');
+      if (targetText) targetText.textContent = shadeName;
+    });
+  });
+</script><footer class="mt-12 bg-surface-container-low px-6 py-10 rounded-t-xl"><div class="space-y-8"><div class="space-y-3"><h3 class="text-sm font-headline font-bold uppercase tracking-widest text-primary">Buni Crochet</h3><p class="text-xs font-body leading-relaxed text-on-surface-variant">Intricately handcrafted artisanal crochet treasures, spun in India with organic yarns and heirloom dedication.</p></div><div class="grid grid-cols-2 gap-6 text-xs"><div class="space-y-3"><h4 class="font-label font-bold uppercase tracking-wider text-on-surface">Collections</h4><ul class="space-y-2 text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Tote Bags &amp; Pouches</a></li><li><a class="hover:text-primary transition-colors" href="#">Apparel &amp; Cardigans</a></li><li><a class="hover:text-primary transition-colors" href="#">Amigurumi &amp; Toys</a></li><li><a class="hover:text-primary transition-colors" href="#">Home Accents</a></li></ul></div><div class="space-y-3"><h4 class="font-label font-bold uppercase tracking-wider text-on-surface">Customer Care</h4><ul class="space-y-2 text-on-surface-variant"><li><a class="hover:text-primary transition-colors" href="#">Track Your Order</a></li><li><a class="hover:text-primary transition-colors" href="#">Shipping Policy</a></li><li><a class="hover:text-primary transition-colors" href="#">Care Guide</a></li><li><a class="hover:text-primary transition-colors" href="#">Contact Studio</a></li></ul></div></div><div class="space-y-3 pt-2"><h4 class="text-[11px] font-label font-bold uppercase tracking-wider text-on-surface-variant">100% Secure Payments</h4><div class="flex items-center gap-2 text-xs font-medium text-on-surface-variant"><span class="px-2 py-1 bg-surface-container-lowest rounded text-[10px] uppercase font-bold text-primary shadow-[0_1px_4px_rgba(0,0,0,0.03)]">UPI</span><span class="px-2 py-1 bg-surface-container-lowest rounded text-[10px] uppercase font-bold text-primary shadow-[0_1px_4px_rgba(0,0,0,0.03)]">Razorpay</span><span class="px-2 py-1 bg-surface-container-lowest rounded text-[10px] uppercase font-bold text-primary shadow-[0_1px_4px_rgba(0,0,0,0.03)]">Cards / NetBanking</span></div></div><div class="pt-4 text-[11px] text-on-surface-variant/80 flex flex-col gap-1"><p>© 2025 Buni Crochet. bunicrochet.in • Crafted with Love.</p></div></div></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-1px_8px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-16 px-2"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="explore-catalog" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="text-[11px] font-label">Shop</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="categories" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="text-[11px] font-label">Categories</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="wishlist" href="#"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="text-[11px] font-label">Wishlist</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="text-[11px] font-label">Cart</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="my-account" href="#"><span class="material-symbols-outlined text-[22px]">person</span><span class="text-[11px] font-label">Account</span></a></div></nav></body></html>

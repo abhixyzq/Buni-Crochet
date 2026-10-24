@@ -1,0 +1,6 @@
+{
+  "name": "Buni Crochet",
+  "description": "Artisanal handcrafted crochet flowers, bouquets, amigurumi keepsakes, and custom gifts spun with 100% natural cotton yarn in India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
